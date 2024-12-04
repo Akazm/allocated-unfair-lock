@@ -1,4 +1,4 @@
-import AllocatedUnfairLock
+import AllocatedUnfairLockShim
 import Carbon
 import Foundation
 import XCTest

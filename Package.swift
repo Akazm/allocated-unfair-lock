@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "OSAllocatedUnfairLockShim",
+    name: "AllocatedUnfairLockShim",
     platforms: [
         .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6)
     ],
     products: [
         .library(
-            name: "AllocatedUnfairLock",
-            targets: ["AllocatedUnfairLock"]
+            name: "AllocatedUnfairLockShim",
+            targets: ["AllocatedUnfairLockShim"]
         ),
     ],
     dependencies: [
@@ -17,22 +17,22 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AllocatedUnfairLock"
+            name: "AllocatedUnfairLockShim"
         ),
         .testTarget(
             name: "AllocatedUnfairLockShimTests",
-            dependencies: ["AllocatedUnfairLock"]
+            dependencies: ["AllocatedUnfairLockShim"]
         ),
         .testTarget(
             name: "AllocatedUnfairLockShimTestsWithDisabledConcurrencyChecks",
-            dependencies: ["AllocatedUnfairLock"],
+            dependencies: ["AllocatedUnfairLockShim"],
             swiftSettings: [
                 .swiftLanguageMode(.v5),
-          ]
+            ]
         ),
         .executableTarget(
             name: "CmdLineAllocatedUnfairLockTests",
-            dependencies: ["AllocatedUnfairLock"]
+            dependencies: ["AllocatedUnfairLockShim"]
         )
     ]
 )

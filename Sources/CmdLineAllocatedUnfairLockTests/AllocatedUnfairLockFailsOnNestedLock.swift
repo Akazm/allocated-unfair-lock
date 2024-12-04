@@ -1,4 +1,4 @@
-import AllocatedUnfairLock
+import AllocatedUnfairLockShim
 import XCTest
 
 @main
