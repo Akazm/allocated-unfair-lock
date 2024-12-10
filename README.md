@@ -12,17 +12,15 @@ This package might also be of use when Swift 6's [Mutex](https://developer.apple
 
 ## Usage example
 
-1. Add the following dependency to your `Package.swift` file:
+### 1. Add the following dependency to your `Package.swift` file:
 
 ```
     .package(url: "https://github.com/Akazm/allocated-unfair-lock", from: "1.1.0")
 ```
 
-2. Add `AllocatedUnfairLockShim` to the target dependencies.
+### 2. Add `AllocatedUnfairLockShim` to the target dependencies.
 
-From then on, you're ready to go.
-
-Code says more than a thousand words, so here's a simple usage example:
+### 3. `AllocatedUnfairLock` should be available within your project.    
 
 ```swift
 import AllocatedUnfairLockShim
@@ -35,3 +33,7 @@ Happy locking on older platforms!
 For API reference, see https://developer.apple.com/documentation/os/osallocatedunfairlock
 */
 ```
+
+`AllocatedUnfairLock` automatically falls back to lower level C-APIs 
+([os_unfair_lock et. al](https://developer.apple.com/documentation/os/os_unfair_lock)) in case the requirements for 
+`OSAllocatedUnfairLock` are not satisfied for your current target. 
