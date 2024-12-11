@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "AllocatedUnfairLockShim",
+    name: "allocated-unfair-lock-shim",
     platforms: [
         .macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6)
     ],
