@@ -15,7 +15,7 @@ This package might also be of use when Swift 6's [Mutex](https://developer.apple
 ### 1. Add the following dependency to your `Package.swift` file:
 
 ```
-    .package(url: "https://github.com/Akazm/allocated-unfair-lock", from: "1.1.0")
+    .package(url: "https://github.com/Akazm/allocated-unfair-lock", from: "1.2.0")
 ```
 
 ### 2. Add `AllocatedUnfairLockShim` to the target dependencies.
